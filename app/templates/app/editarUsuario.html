@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Editar Usuario
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Editar Usuario</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Actualizar">
+    </form>
+{% endblock contenido %}

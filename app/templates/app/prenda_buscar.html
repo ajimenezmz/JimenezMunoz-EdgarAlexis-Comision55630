@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar Prenda
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <form action="{% url 'buscarPrenda' %}" method="get">
+        {% csrf_token %}
+        <p>Buscar por tipo de Prenda: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

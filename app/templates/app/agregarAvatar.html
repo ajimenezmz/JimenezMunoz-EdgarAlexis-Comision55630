@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Agregar Imagen de Perfil
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar Imagen</h2>
+    <form action="" method="post" enctype="multipart/form-data"> 
+
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Agregar Imagen">
+    </form>
+{% endblock contenido %}

@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar Evento
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <form action="{% url 'buscarEvento' %}" method="get">
+        {% csrf_token %}
+        <p>Buscar Evento por ciudad: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

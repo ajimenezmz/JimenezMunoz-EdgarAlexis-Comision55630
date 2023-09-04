@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>Agendar Evento</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table> 
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

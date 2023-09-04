@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <h1>Detalles</h1>
+{% endblock title %}
+    
+{% block contenido %}
+
+<figure class="figure">
+    <img src="{{prenda.imagenPrenda.url}}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+    <figcaption class="figure-caption">{{prenda.tipoPrenda}}.</figcaption>
+  </figure>
+
+  <ul class="list-group">
+    <li class="list-group-item">{{prenda.tipoPrenda}}</li>
+    <li class="list-group-item">{{prenda.tela}}</li>
+    <li class="list-group-item">{{prenda.color}}</li>
+    <li class="list-group-item">{{prenda.talla}}</li>
+    <li class="list-group-item">{{prenda.precio}}</li>
+    <li class="list-group-item">{{prenda.cantidad}}</li>
+    <li class="list-group-item">{{prenda.descripcion}}</li>
+    <li class="list-group-item">{{prenda.telefonoVendedor}}</li>
+    <li class="list-group-item">{{prenda.emailVendedor}}</li>
+</ul>
+
+{% endblock contenido %}
+

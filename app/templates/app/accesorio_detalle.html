@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <h1>Detalles</h1>
+{% endblock title %}
+    
+{% block contenido %}
+
+<figure class="figure">
+    <img src="{{accesorio.imagenAccesorio.url}}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+    <figcaption class="figure-caption">{{accesorio.tipoAccesorio}}.</figcaption>
+  </figure>
+
+  <ul class="list-group">
+    <li class="list-group-item">{{accesorio.tipoAccesorio}}</li>
+    <li class="list-group-item">{{accesorio.tela}}</li>
+    <li class="list-group-item">{{accesorio.color}}</li>
+    <li class="list-group-item">{{accesorio.talla}}</li>
+    <li class="list-group-item">{{accesorio.precio}}</li>
+    <li class="list-group-item">{{accesorio.cantidad}}</li>
+    <li class="list-group-item">{{accesorio.descripcion}}</li>
+    <li class="list-group-item">{{accesorio.telefonoVendedor}}</li>
+    <li class="list-group-item">{{accesorio.emailVendedor}}</li>
+</ul>
+
+{% endblock contenido %}
+

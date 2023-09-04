@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <h1>Nosotros</h1>
+{% endblock title %}
+    
+    
+
+{% block contenido %}
+    <div class="text-center text-black">
+        
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="app\static\app\media\imagenes\fotoPerfil.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Edgar Alexis Jiménez Muñoz</h5>
+              <p class="card-text">Soy un estudiante de Fisica, con interés en la programación y en la tecnologia con fin de encontrar e implementar soluciones que ayuden a las comunidades de las que formo parte</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Ciudad de México</li>
+              <li class="list-group-item">27 años</li>
+              <li class="list-group-item">Estudiante de física, UNAM</li>
+
+            </ul>
+            <div class="card-body">
+              <a href="https://github.com/ajimenezmz" class="card-link">Mi github</a>
+            </div>
+          </div>
+
+        <p>El proyecto de Arropandonos es una iniciativa que permita a las comunidades tener un lugar donde poder vender, intercambiar y comprar ropa.</p>
+        <p>Esto, con la intencion de reducir la cantidad de ropa que termina desperdiciada e intentando poder fortalecer los vinculos sociales de las comunidades que usen la plataforma</p>
+        <p>De igual manera, se pretende extender una plataforma que le permita a la comunidad organizar eventos donde se puedan llevar a cabo actividades economicas.</p>
+    </p>
+    </div>
+{% endblock contenido %}

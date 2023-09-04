@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar Calzado
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <form action="{% url 'buscarCalzado' %}" method="get">
+        {% csrf_token %}
+        <p>Buscar por tipo de Calzado: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

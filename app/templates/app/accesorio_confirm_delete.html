@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <h1>Confirmar delecion</h1>
+{% endblock title %}
+    
+{% block contenido %}
+
+<div class="container text-center">
+
+  <form method="post">{% csrf_token %}
+      <h4>Estás seguro(a) que deseas borrar {{accesorio.tipoAccesorio}} hecho de {{accesorio.material}} y tamaño {{accesorio.size}} ?</h4>
+      <p>
+          <button type="submit" class="btn btn-danger">Eliminar</button>
+      </p>
+  </form>
+  
+  </div>
+
+{% endblock contenido %}
+
+

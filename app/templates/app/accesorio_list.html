@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <h1>Bienvenidos a la tienda</h1>
+{% endblock title %}
+    
+{% block contenido %}
+
+<div class="container text-center">
+    <h1>Accesorios</h1>
+</div>
+
+<br>
+<div class="container text-center">
+    <div class="row">
+            {% for accesorio in accesorio_list %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{accesorio.imagenAccesorio.url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{accesorio.tipoAccesorio}}</h5>
+                  <p class="card-text">{{accesorio.descripcion}}</p>
+                  <a href="{% url 'detalle_accesorio' accesorio.id %}" class="btn btn-primary">Detalles</a>
+                  <a href="{% url 'editar_accesorio' accesorio.id %}"><i class="fa-solid fa-pencil" style="color: #000000;"></i></a>
+                  <a href="{% url 'borrar_accesorio' accesorio.id %}"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></i></a>
+                </div>
+              </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock contenido %}
